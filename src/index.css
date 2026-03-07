@@ -1,0 +1,423 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations for travel elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes fly {
+  0% { transform: translateX(-100px) translateY(0px); }
+  100% { transform: translateX(100vw) translateY(-20px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.8); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slide-in-right {
+  0% { transform: translateX(100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-up {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-in-down {
+  0% { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 3.5s ease-in-out infinite 1s;
+}
+
+.animate-fly {
+  animation: fly 15s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 7s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 3s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.8s ease-out forwards;
+}
+
+.animate-slide-in-down {
+  animation: slide-in-down 0.8s ease-out forwards;
+}
+
+/* Jungle-themed animations */
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes sway-delayed {
+  0%, 100% { transform: rotate(1deg); }
+  50% { transform: rotate(-3deg); }
+}
+
+@keyframes sway-slow {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+@keyframes fly-bird {
+  0% { transform: translateX(-50px) translateY(0px); }
+  25% { transform: translateX(100px) translateY(-10px); }
+  50% { transform: translateX(250px) translateY(5px); }
+  75% { transform: translateX(400px) translateY(-5px); }
+  100% { transform: translateX(calc(100vw + 50px)) translateY(0px); }
+}
+
+@keyframes fly-bird-delayed {
+  0% { transform: translateX(-30px) translateY(0px); }
+  25% { transform: translateX(80px) translateY(-15px); }
+  50% { transform: translateX(200px) translateY(8px); }
+  75% { transform: translateX(350px) translateY(-8px); }
+  100% { transform: translateX(calc(100vw + 30px)) translateY(0px); }
+}
+
+@keyframes fly-bird-slow {
+  0% { transform: translateX(-40px) translateY(0px); }
+  25% { transform: translateX(120px) translateY(-12px); }
+  50% { transform: translateX(280px) translateY(6px); }
+  75% { transform: translateX(450px) translateY(-6px); }
+  100% { transform: translateX(calc(100vw + 40px)) translateY(0px); }
+}
+
+@keyframes float-leaf {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(5deg); }
+  50% { transform: translateY(-25px) rotate(0deg); }
+  75% { transform: translateY(-10px) rotate(-5deg); }
+}
+
+@keyframes float-leaf-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(-3deg); }
+  50% { transform: translateY(-30px) rotate(0deg); }
+  75% { transform: translateY(-15px) rotate(3deg); }
+}
+
+/* Apply jungle animations */
+.animate-sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.animate-sway-delayed {
+  animation: sway-delayed 3.5s ease-in-out infinite 1s;
+}
+
+.animate-sway-slow {
+  animation: sway-slow 5s ease-in-out infinite 0.5s;
+}
+
+.animate-fly-bird {
+  animation: fly-bird 12s linear infinite;
+}
+
+.animate-fly-bird-delayed {
+  animation: fly-bird-delayed 15s linear infinite 3s;
+}
+
+.animate-fly-bird-slow {
+  animation: fly-bird-slow 18s linear infinite 6s;
+}
+
+.animate-float-leaf {
+  animation: float-leaf 6s ease-in-out infinite;
+}
+
+.animate-float-leaf-delayed {
+  animation: float-leaf-delayed 7s ease-in-out infinite 2s;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000 { animation-delay: 1s; }
+.delay-1500 { animation-delay: 1.5s; }
+.delay-2000 { animation-delay: 2s; }
+
+/* Glassmorphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-purple {
+  background: rgba(168, 85, 247, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Custom slider styles for minimum handle */
+.dual-range-slider-min::-webkit-slider-thumb {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  cursor: pointer;
+  border: 4px solid white;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.dual-range-slider-min::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.7);
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.dual-range-slider-min::-webkit-slider-thumb:active {
+  transform: scale(1.4);
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.8);
+}
+
+.dual-range-slider-min::-webkit-slider-track {
+  background: transparent;
+  border: none;
+}
+
+.dual-range-slider-min {
+  pointer-events: auto;
+}
+
+/* Custom slider styles for maximum handle */
+.dual-range-slider-max::-webkit-slider-thumb {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #059669, #047857);
+  cursor: pointer;
+  border: 4px solid white;
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.5);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.dual-range-slider-max::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.7);
+  background: linear-gradient(135deg, #047857, #065f46);
+}
+
+.dual-range-slider-max::-webkit-slider-thumb:active {
+  transform: scale(1.4);
+  box-shadow: 0 10px 24px rgba(5, 150, 105, 0.8);
+}
+
+.dual-range-slider-max::-webkit-slider-track {
+  background: transparent;
+  border: none;
+}
+
+.dual-range-slider-max {
+  pointer-events: auto;
+}
+
+/* Fixed dual-range slider styles */
+.range-slider {
+  pointer-events: none;
+}
+
+.range-slider::-webkit-slider-thumb {
+  pointer-events: auto;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 4px solid white;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.range-slider-min {
+  z-index: 1;
+}
+
+.range-slider-min::-webkit-slider-thumb {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
+}
+
+.range-slider-min::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.7);
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.range-slider-max {
+  z-index: 2;
+}
+
+.range-slider-max::-webkit-slider-thumb {
+  background: linear-gradient(135deg, #059669, #047857);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.5);
+}
+
+.range-slider-max::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.7);
+  background: linear-gradient(135deg, #047857, #065f46);
+}
+
+/* Firefox support */
+.range-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 4px solid white;
+  border: none;
+  pointer-events: auto;
+}
+
+.range-slider-min::-moz-range-thumb {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
+}
+
+.range-slider-max::-moz-range-thumb {
+  background: linear-gradient(135deg, #059669, #047857);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.5);
+}
+
+.range-slider::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
+.range-slider::-webkit-slider-track {
+  background: transparent;
+  border: none;
+}
+
+.dual-range-slider-min::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  cursor: pointer;
+  border: 4px solid white;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
+  border: none;
+  pointer-events: auto;
+}
+
+.dual-range-slider-min::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+
+.dual-range-slider-max::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #059669, #047857);
+  cursor: pointer;
+  border: 4px solid white;
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.5);
+  border: none;
+  pointer-events: auto;
+}
+
+.dual-range-slider-max::-moz-range-track {
+  background: transparent;
+  border: none;
+}
