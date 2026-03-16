@@ -53,8 +53,6 @@ const Footer = () => {
               <span className="hover:text-purple-400 transition-colors cursor-pointer">Pranav</span>
               <span className="text-purple-400">•</span>
               <span className="hover:text-purple-400 transition-colors cursor-pointer">Praveen</span>
-              <span className="text-purple-400">•</span>
-              <span className="hover:text-purple-400 transition-colors cursor-pointer">Rajesh</span>
             </div>
           </div>
 
