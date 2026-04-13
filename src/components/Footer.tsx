@@ -58,7 +58,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-gray-500 text-sm">
-            © 2025 DestinAI. Built for educational purposes as a Design Thinking project.
+            © 2025 DestinAI. Built for educational purposes as a Machine Learning project.
           </p>
         </div>
       </div>
